@@ -154,22 +154,26 @@
 <br>
 
 **৹ 인프라**
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_stack.png" alt="인프라 기술스택" width="800"/>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_stack.png" alt="인프라 기술스택" width="800"/>
 
 <br>
 
 **৹ 백엔드**
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/back_stack.png" alt="인프라 기술스택" width="500"/>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/back_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
 **৹ 프론트엔드**
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/front_stack.png" alt="인프라 기술스택" width="500"/>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/front_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
 **৹ DB**
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
 <br><br>
 
@@ -183,37 +187,39 @@
 
 - **온프레미스 - 클라우드 연동형 k8s 인프라 구조**
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_arch.png" alt="인프라 아키텍처" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_arch.png" alt="인프라 아키텍처" width="1000"/>
 
 <br>
 
-  [ 온프레미스 노드 구성 및 사양 ]
-  
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/onpre_table.png" alt="온프레 테이블" width="500"/>
+[ 온프레미스 노드 구성 및 사양 ]
 
-  [ 클라우드 노드 구성 및 사양 ]
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/onpre_table.png" alt="온프레 테이블" width="500"/>
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/cloud_table.png" alt="온프레 테이블" width="500"/>
+<br>
 
-  <br><br>
+[ 클라우드 노드 구성 및 사양 ]
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/cloud_table.png" alt="온프레 테이블" width="500"/>
+
+<br><br>
 
 - **전체 인프라 아키텍처**
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra.png" alt="인프라 아키텍처" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra.png" alt="인프라 아키텍처" width="1000"/>
 
-  <br>
+<br>
 
-  | 구분 | 구성 요소 | 주요 내용 |
-  |--------------------|--------------|-----------|
-  | [1] 개발자 → GitHub | GitHub 저장소 | App, Infra, Wargame 저장소에 코드 푸시 |
-  |  | 트리거 방식 | GitHub Actions, Jenkins가 변경 감지 후 파이프라인 실행 |
-  | [2] 온프레미스 구성 | CI/CD 도구 | - Jenkins : 빌드 파이프라인 실행<br>- Kaniko : Docker 이미지 빌드<br>- Trivy : 보안 취약점 스캔<br>- Harbor : 이미지 레지스트리<br>- Vault : 시크릿 관리 |
-  |  | 모니터링 | - Prometheus : 메트릭 수집<br>- Grafana : 시각화 대시보드<br>- Slack : 상태 알림 연동 |
-  |  | 스토리지 | - Rook + Ceph : 분산 파일 시스템 (PVC)<br>- PostgreSQL, Redis : 서비스 데이터 저장소 |
-  | [3] AWS 클라우드 배포 | 네트워크 구성 | - VPC 내 이중 AZ 구성<br>- Public Subnet : Bastion Server<br>- Private Subnet : Spring Boot, React 컨테이너 |
-  |  | 외부 연동 | - Route 53 + Load Balancer : 트래픽 분산<br>- S3, ECR : 정적 파일 및 이미지 저장 |
-  | [4] 온프레 ↔ 클라우드 연계 | 이미지 전달 | Jenkins + Kaniko 빌드 결과를 Harbor에 업로드 후 AWS에서 pull |
-  |  | 역할 분리 | - 온프레 : 빌드/보안/모니터링<br>- 클라우드 : 서비스 실행(Spring, React) |
+| 구분 | 구성 요소 | 주요 내용 |
+|--------------------|--------------|-----------|
+| [1] 개발자 → GitHub | GitHub 저장소 | App, Infra, Wargame 저장소에 코드 푸시 |
+|  | 트리거 방식 | GitHub Actions, Jenkins가 변경 감지 후 파이프라인 실행 |
+| [2] 온프레미스 구성 | CI/CD 도구 | - Jenkins : 빌드 파이프라인 실행<br>- Kaniko : Docker 이미지 빌드<br>- Trivy : 보안 취약점 스캔<br>- Harbor : 이미지 레지스트리<br>- Vault : 시크릿 관리 |
+|  | 모니터링 | - Prometheus : 메트릭 수집<br>- Grafana : 시각화 대시보드<br>- Slack : 상태 알림 연동 |
+|  | 스토리지 | - Rook + Ceph : 분산 파일 시스템 (PVC)<br>- PostgreSQL, Redis : 서비스 데이터 저장소 |
+| [3] AWS 클라우드 배포 | 네트워크 구성 | - VPC 내 이중 AZ 구성<br>- Public Subnet : Bastion Server<br>- Private Subnet : Spring Boot, React 컨테이너 |
+|  | 외부 연동 | - Route 53 + Load Balancer : 트래픽 분산<br>- S3, ECR : 정적 파일 및 이미지 저장 |
+| [4] 온프레 ↔ 클라우드 연계 | 이미지 전달 | Jenkins + Kaniko 빌드 결과를 Harbor에 업로드 후 AWS에서 pull |
+|  | 역할 분리 | - 온프레 : 빌드/보안/모니터링<br>- 클라우드 : 서비스 실행(Spring, React) |
 
 <br><br>
 
@@ -268,80 +274,80 @@
 
 <br>
 
-**① 메인 화면**
+### ① 메인 화면
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front0.png" alt="프론트0" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front00.png" alt="프론트2" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front0.png" alt="프론트0" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front00.png" alt="프론트00" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**② 로그인 및 회원가입**
+### ② 로그인 및 회원가입
 
-<div style="display: flex; align-items: flex-start; gap: 16px;">
+<div style="display: flex; align-items: flex-start; gap: 20px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front1.jpg" alt="프론트1" style="height: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front2.png" alt="프론트2" style="height: 300px;" />
 </div>
 
 <br><br>
 
-**③ 워게임**
+### ③ 워게임
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front3.png" alt="프론트3" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front4.png" alt="프론트4" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front3.png" alt="프론트3" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front4.png" alt="프론트4" style="height: 300px, width: 300px;" />
 </div>
 
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front5.png" alt="프론트5" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front6.png" alt="프론트6" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front5.png" alt="프론트5" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front6.png" alt="프론트6" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**④ 랭킹**
+### ④ 랭킹
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front7.png" alt="프론트7" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front8.png" alt="프론트8" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front7.png" alt="프론트7" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front8.png" alt="프론트8" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**⑤ 커뮤니티**
+### ⑤ 커뮤니티
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front9.png" alt="프론트9" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front10.png" alt="프론트10" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front9.png" alt="프론트9" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front10.png" alt="프론트10" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**⑥ 커리어**
+### ⑥ 커리어
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front11.png" alt="프론트11" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front12.png" alt="프론트12" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front11.png" alt="프론트11" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front12.png" alt="프론트12" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**⑦ 대시보드**
+### ⑦ 대시보드
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front13.png" alt="프론트13" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front14.png" alt="프론트14" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front13.png" alt="프론트13" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front14.png" alt="프론트14" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
 
-**⑧ 관리자 전용 페이지**
+### ⑧ 관리자 전용 페이지
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front15.png" alt="프론트15" style="height: 300px;" />
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front16.png" alt="프론트16" style="height: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front15.png" alt="프론트15" style="height: 300px, width: 300px;" />
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front16.png" alt="프론트16" style="height: 300px, width: 300px;" />
 </div>
 
 <br><br>
@@ -359,21 +365,21 @@
 
 - **주요 기능별 흐름**
 
-  | 기능 영역        |     클래스 흐름    |
-  |------------------|----------------------------------|
-  | 마이페이지        | MypageController → MypageServiceImpl → 여러 Repository (User, Board 등) |
-  | 워게임          | WargameController → WargameServiceImpl → WargameRepository <br> Entity : Wargame / SolvedWargame / Review |
-  | 랭킹          | RankingController → UserServiceImpl    |
-  | 커뮤니티(Q&A)     | QnaController → QuestionServiceImpl, AnswerServiceImpl → QuestionRepository, AnswerRepository |
-  | 게시판/댓글       | BoardController, CommentController → BoardServiceImpl → BoardRepository <br> Entity : Board / Comment / BoardLike |
-  |  커리어     | JobController → JobServiceImpl → JobRepository    |
-  | 대시보드          | DashboardController → DashboardServiceImpl → UserStatsRepository, SolvedWargameRepository 등 <br> DTO : ResRadarScoreDto, ResScoreTrendDto 등 |
+| 기능 영역        |     클래스 흐름    |
+|------------------|----------------------------------|
+| 마이페이지        | MypageController → MypageServiceImpl → 여러 Repository (User, Board 등) |
+| 워게임          | WargameController → WargameServiceImpl → WargameRepository <br> Entity : Wargame / SolvedWargame / Review |
+| 랭킹          | RankingController → UserServiceImpl    |
+| 커뮤니티(Q&A)     | QnaController → QuestionServiceImpl, AnswerServiceImpl → QuestionRepository, AnswerRepository |
+| 게시판/댓글       | BoardController, CommentController → BoardServiceImpl → BoardRepository <br> Entity : Board / Comment / BoardLike |
+|  커리어     | JobController → JobServiceImpl → JobRepository    |
+| 대시보드          | DashboardController → DashboardServiceImpl → UserStatsRepository, SolvedWargameRepository 등 <br> DTO : ResRadarScoreDto, ResScoreTrendDto 등 |
 
 <br><br>
 
 - **ERD**
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="앱 아키텍처" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="앱 아키텍처" width="1000"/>
 
   <details>
   <summary> ERD 요약 테이블 (클릭하여 펼치기)</summary>
