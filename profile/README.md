@@ -10,7 +10,9 @@
 
 <br>
 
-## ▪ Team 꿀벌 방범대 소개  
+## 🔹Team 꿀벌 방범대 소개  
+<br>
+
 우리FISA 4기 클라우드 엔지니어링 과정 수강생 5명으로 구성된 팀입니다. <br>
 웹 애플리케이션 개발과 운영 및 배포(DevOps) 전반을 함께 다루며<br>
 약 2개월간 협업을 통해 BeeGuardians 프로젝트를 완성했습니다.
@@ -21,17 +23,28 @@
 
 <br>
 
-## ▪ 프로젝트 기간
-📆 2025.04.18 ~ 2025.06.10
+## 🔹프로젝트 기간
+
+### 📆 2025.04.18 ~ 2025.06.10
 
 <br>
 
-## ▪ 마일스톤
+## 🔹마일스톤
+<br>
+
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
 <br>
 
-## ▪ Overview
+## 🔹Git Branch 전략
+<br>
+
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="800"/>
+
+<br>
+
+## 🔹Overview
+<br>
 
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다 : <br>
 ### [1. 프로젝트 개요](#1-프로젝트-개요)  
@@ -46,6 +59,7 @@
 <br><br>
 
 # 1. 프로젝트 개요
+<br>
 
 ### 🌍 도입 배경
 - 세계경제포럼(WEF)이 발표한 「글로벌 사이버보안 전망 2025」보고서에 따르면, 전 세계적으로 사이버 보안 인력이 400만 명이 부족하여 인재 유치가 시급한 상황임
@@ -79,6 +93,7 @@
 
 
 # 2. 프로젝트 소개
+<br>
 
 ### Kubernetes 기반 모의해킹 트레이닝 플랫폼 - “Guardians”
 
@@ -99,13 +114,13 @@
 이 flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 실제 보안 취약점을 분석하고 추적하는 연습에 적합함
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/wargame_flow.jpg" alt="유저 다이어그램" width="700"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/wargame_flow.jpg" alt="유저 다이어그램" width="800"/>
 
-<br><br>
+<br>
 
 ### 🎲 워게임 pod 생성 요약도 
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/pod_flow.png" alt="POD요약도" width="700"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/pod_flow.png" alt="POD요약도" width="800"/>
 
 ```
 1. React (프론트엔드)  
@@ -127,7 +142,7 @@
 
 <br><br>
 
-### 🔸서비스 주요 기능
+### 📋 서비스 주요 기능
 
 | 기능 영역         | 설명                                                                 |
 |------------------|----------------------------------------------------------------------|
@@ -142,7 +157,7 @@
 
   <br><br>
 
-  ### 🔸인프라 주요 기능
+  ### 📋 인프라 주요 기능
 ```
 기입 예정
 ```
@@ -152,25 +167,25 @@
 
 <br>
 
-### ৹ 인프라
+### < 인프라 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_stack.png" alt="인프라 기술스택" width="800"/>
 
 <br>
 
-### ৹ 백엔드
+### < 백엔드 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/back_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
-### ৹ 프론트엔드
+### < 프론트엔드 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/front_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
-### ৹ DB
+### < DB >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
@@ -180,7 +195,7 @@
 
 <br>
 
-### ৹ 인프라 아키텍처
+### ✅ 인프라 아키텍처
 
 <br>
 
@@ -226,13 +241,13 @@
 
 <br>
 
-### ৹ 애플리케이션 아키텍처
+### ✅ 애플리케이션 아키텍처
 
 <br>
 
 - **3-Tier 아키텍처**
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="700"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
   - Presentation Tier :
 사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
@@ -245,7 +260,7 @@
 
 - **MVC 모델**
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="700"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
     - View :
 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
@@ -257,6 +272,7 @@
 <br><br>
 
 # 4. 프론트엔드
+<br>
 
 ```
 # 메뉴 흐름 요약
@@ -274,6 +290,8 @@
 <br>
 
 ## ① 메인 화면
+<br>
+
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front0.png" alt="프론트0" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front00.png" alt="프론트00" style="height: 300px, width: 300px;" />
@@ -282,6 +300,7 @@
 <br><br>
 
 ## ② 로그인 및 회원가입
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 20px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front1.jpg" alt="프론트1" style="height: 300px;" />
@@ -291,6 +310,7 @@
 <br><br>
 
 ## ③ 워게임
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front3.png" alt="프론트3" style="height: 300px, width: 300px;" />
@@ -307,6 +327,7 @@
 <br><br>
 
 ## ④ 랭킹
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front7.png" alt="프론트7" style="height: 300px, width: 300px;" />
@@ -316,6 +337,7 @@
 <br><br>
 
 ## ⑤ 커뮤니티
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front9.png" alt="프론트9" style="height: 300px, width: 300px;" />
@@ -325,6 +347,7 @@
 <br><br>
 
 ## ⑥ 커리어
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front11.png" alt="프론트11" style="height: 300px, width: 300px;" />
@@ -334,6 +357,7 @@
 <br><br>
 
 ## ⑦ 대시보드
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front13.png" alt="프론트13" style="height: 300px, width: 300px;" />
@@ -343,6 +367,7 @@
 <br><br>
 
 ## ⑧ 관리자 전용 페이지
+<br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front15.png" alt="프론트15" style="height: 300px, width: 300px;" />
