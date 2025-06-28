@@ -22,7 +22,6 @@
 <br>
 
 ## 🔹프로젝트 기간
-`
 ### 📆 2025.04.18 ~ 2025.06.10
 
 <br>
@@ -37,7 +36,7 @@
 ## 🔹Git Branch 전략
 <br>
 
-기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 최종적으로 <br> main 브랜치에 병합하여 운영 환경에 배포했습니다.
+기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 <br> 최종적으로 main 브랜치에 병합하여 운영 환경에 배포했습니다.
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="800"/>
 
@@ -66,6 +65,8 @@
 
 - 최근 국내 대형 통신사를 시작으로 많은 기업들에서 해킹 사고가 잇따라 발생하면서 보안의 중요성이 대두되고 있음
 
+<br>
+
 ### 🎯 문제 인식
 - 보안이나 해킹 관련 실습을 해보려면 가상머신(VM) 설정, 각종 도구 설치 등 **복잡한 환경 구성**이 선행되어야 함
 
@@ -74,6 +75,8 @@
 - 여러 사용자가 동일한 환경을 공유할 경우 충돌이나 오류가 발생할 수 있음
 
 - 실습 플랫폼 자체도 부족하거나, 유료 플랫폼이 많아 자유로운 접근이 어려움
+
+<br>
 
 ### 💡 해결 방안
 - 보안이나 해킹 실습 문제를 쉽고 빠르게 수행할 수 있도록 **Kubernetes 기반으로 실습 환경(pod)** 을 자동 생성하는 구조를 설계함
@@ -87,7 +90,7 @@
 <br>
 
 > [!NOTE]
-> pod는 Kubernetes에서 가장 작은 배포 단위로, 하나 이상의 컨테이너를 포함할 수 있는 격리된 실행 환경입니다. <br> 전통적인 가상머신(VM)은 각 인스턴스마다 전체 운영체제를 포함해 무겁고 부팅시간이 오래 걸리는 반면, <br> pod는 호스트 OS를 공유하면서 필요한 애플리케이션만 실행하기 때문에 리소스 사용이 효율적이고 배포 속도가 빠르다는 장점을 가지고 있습니다. 
+> pod는 Kubernetes에서 가장 작은 배포 단위로, 하나 이상의 컨테이너를 포함할 수 있는 격리된 실행 환경입니다. <br> 전통적인 가상머신(VM)은 각 인스턴스마다 전체 운영체제를 포함해 무겁고 부팅시간이 오래 걸리는 반면, <br> pod는 호스트 OS를 공유하면서 필요한 애플리케이션만 실행하기 때문에 <br> 리소스 사용이 효율적이고 배포 속도가 빠르다는 장점을 가지고 있습니다. 
 
 <br><br>
 
@@ -201,11 +204,8 @@
 
 <br><br>
 
----
 
-<br>
-
-### ✅ 인프라 아키텍처
+## ✅ 인프라 아키텍처 개요
 
 <br>
 
@@ -228,12 +228,14 @@
 <br>
 
 > [!TIP]
-> 프로젝트 초기에는 AWS 비용을 절감하기 위해 온프레미스 자원을 우선적으로 활용해 인프라를 구성했습니다. <br> 이후 트래픽 증가와 서비스 안정성 확보를 위해 클라우드 기반 리소스를 구성했습니다.<br><br> 온프레미스에는 1대의 Master와 5대의 일반 Worker, 1대의 고사양 Worker 노드로 구성되었으며, <br> 클라우드 환경은 2개의 AZ를 활용해 Master/Worker 노드를 고가용성 구조로 분산 배치했습니다. <br> 또한 각 AZ에는 Bastion 서버를 별도로 두어 보안성과 접근 통제를 강화했습니다.
+> 프로젝트 초기에는 AWS 비용을 절감하기 위해 온프레미스 자원을 우선적으로 활용해 인프라를 구성했습니다. <br> 이후 트래픽 증가와 서비스 안정성 확보를 위해 클라우드 기반 리소스를 구성했습니다.<br><br> 온프레미스에는 1대의 Master와 5대의 일반 Worker, 1대의 고사양 Worker 노드로 구성되었으며 <br> 클라우드 환경은 2개의 AZ를 활용해 Master/Worker 노드를 고가용성 구조로 분산 배치했습니다. <br> 또한 각 AZ에는 Bastion 서버를 별도로 두어 보안성과 접근 통제를 강화했습니다.
 
 
 <br><br>
 
-### ✅ 전체 인프라 아키텍처
+## ✅ 전체 인프라 아키텍처
+
+<br>
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra.png" alt="인프라 아키텍처" width="1000"/>
 
@@ -243,36 +245,32 @@
 
 <br><br>
 
----
+
+## ✅ 애플리케이션 아키텍처
 
 <br>
 
-### ✅ 애플리케이션 아키텍처
+### • 3-Tier 아키텍처
 
-<br>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
-- **3-Tier 아키텍처**
-
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
-
-  - Presentation Tier :
+- Presentation Tier : <br>
 사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
-  - Application Tier :
+- Application Tier : <br>
 비즈니스 로직 처리, 인증 및 데이터 접근 수행
-  - Data Tier :
+- Data Tier : <br>
 세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 
 <br><br>
 
-- **MVC 모델**
+### • MVC 모델
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
-    - View :
-기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
-    - Controller :
+- View : <br> 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
+- Controller : <br>
 요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
-    - Model :
+- Model : <br>
 서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
 <br><br>
