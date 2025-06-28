@@ -209,7 +209,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-< 온프레미스 - 클라우드 연동형 k8s 인프라 구조 >
+### < 온프레미스 - 클라우드 연동형 k8s 인프라 구조 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_arch.png" alt="인프라 아키텍처" width="1000"/>
 
@@ -250,32 +250,33 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-< 3-Tier 아키텍처 >
+### < 3-Tier 아키텍처 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
-  ৹ Presentation Tier : <br>
-  사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
+  ৹ Presentation Tier <br>
+  : 사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
   
-  ৹ Application Tier : <br>
-  비즈니스 로직 처리, 인증 및 데이터 접근 수행
+  ৹ Application Tier <br>
+  : 비즈니스 로직 처리, 인증 및 데이터 접근 수행
   
-  ৹ Data Tier : <br>
-  세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
+  ৹ Data Tier <br>
+  : 세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 
 <br><br>
 
-< MVC 모델 >
+### < MVC 모델 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
-  ৹ View : <br> 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
+  ৹ View <br>
+  : 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
   
-  ৹ Controller : <br>
-  요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
+  ৹ Controller <br>
+  : 요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
   
-  ৹ Model : <br>
-  서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
+  ৹ Model <br>
+  : 서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
 <br><br>
 
