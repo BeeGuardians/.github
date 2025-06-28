@@ -1,8 +1,6 @@
 # 우리FISA 4기 최종 프로젝트 🏆우수상 수상팀 - BeeGuardians
 <br>
 
-
-
 ### "배우고 도전하고 성장하세요. 당신의 실력을 수호하는 공간, 가디언즈."
 
 
@@ -24,7 +22,7 @@
 <br>
 
 ## 🔹프로젝트 기간
-
+`
 ### 📆 2025.04.18 ~ 2025.06.10
 
 <br>
@@ -38,6 +36,8 @@
 
 ## 🔹Git Branch 전략
 <br>
+
+기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 최종적으로 <br> main 브랜치에 병합하여 운영 환경에 배포했습니다.
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="800"/>
 
@@ -110,8 +110,8 @@
 
 >다양한 해킹 관련 문제를 풀어보며 보안 기술을 연습하는 실습 콘텐츠. <br>
 사용자는 웹 해킹/포렌식/리버싱 등 여러 분야의 문제를 해결해나가며
-각 문제에 숨겨진 문자열인 **‘flag’** 를 찾아내는 방식으로 진행됨 <br>
-이 flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
+**각 문제에 숨겨진 문자열인 ‘flag’를 찾아내는 방식**으로 진행됨 <br>
+🚩flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 실제 보안 취약점을 분석하고 추적하는 연습에 적합함
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/wargame_flow.jpg" alt="유저 다이어그램" width="800"/>
@@ -158,9 +158,19 @@
   <br><br>
 
   ### 📋 인프라 주요 기능
-```
-기입 예정
-```
+| 기능 영역         | 설명 |
+|------------------|------|
+| CI/CD 파이프라인  | Jenkins와 GitHub Actions를 활용한 자동 빌드 및 배포 |
+| 보안 스캔        | Trivy로 이미지 보안 취약점 검사 수행 |
+| 이미지 저장소     | Harbor로 내부 이미지 저장, DockerHub 대체 |
+| 시크릿 관리       | Vault를 이용한 인증정보 및 환경변수 안전 저장 |
+| 모니터링          | Prometheus + Grafana로 메트릭 수집 및 시각화 |
+| 로그 수집         | Loki + Promtail로 시스템 로그 수집 및 분석 |
+| 스토리지          | Rook-Ceph 기반 PVC 및 Amazon S3 활용 |
+| 고가용성 구성     | 2개 AZ 기반 Master / Worker 분산 배치 |
+| 네트워크 보안     | Bastion 서버, Public / Private 서브넷 분리 및 접근 제어 |
+| 도메인 관리       | Route 53을 통한 도메인 라우팅 설정 |
+
   <br><br>
 
   # 3. 기술 스택 및 아키텍처
@@ -199,7 +209,7 @@
 
 <br>
 
-- **온프레미스 - 클라우드 연동형 k8s 인프라 구조**
+### • 온프레미스 - 클라우드 연동형 k8s 인프라 구조
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_arch.png" alt="인프라 아키텍처" width="1000"/>
 
@@ -215,25 +225,21 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/cloud_table.png" alt="온프레 테이블" width="500"/>
 
+<br>
+
+> [!TIP]
+> 프로젝트 초기에는 AWS 비용을 절감하기 위해 온프레미스 자원을 우선적으로 활용해 인프라를 구성했습니다. <br> 이후 트래픽 증가와 서비스 안정성 확보를 위해 클라우드 기반 리소스를 구성했습니다.<br><br> 온프레미스에는 1대의 Master와 5대의 일반 Worker, 1대의 고사양 Worker 노드로 구성되었으며, <br> 클라우드 환경은 2개의 AZ를 활용해 Master/Worker 노드를 고가용성 구조로 분산 배치했습니다. <br> 또한 각 AZ에는 Bastion 서버를 별도로 두어 보안성과 접근 통제를 강화했습니다.
+
+
 <br><br>
 
-- **전체 인프라 아키텍처**
+### ✅ 전체 인프라 아키텍처
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra.png" alt="인프라 아키텍처" width="1000"/>
 
 <br>
 
-| 구분 | 구성 요소 | 주요 내용 |
-|--------------------|--------------|-----------|
-| [1] 개발자 → GitHub | GitHub 저장소 | App, Infra, Wargame 저장소에 코드 푸시 |
-|  | 트리거 방식 | GitHub Actions, Jenkins가 변경 감지 후 파이프라인 실행 |
-| [2] 온프레미스 구성 | CI/CD 도구 | - Jenkins : 빌드 파이프라인 실행<br>- Kaniko : Docker 이미지 빌드<br>- Trivy : 보안 취약점 스캔<br>- Harbor : 이미지 레지스트리<br>- Vault : 시크릿 관리 |
-|  | 모니터링 | - Prometheus : 메트릭 수집<br>- Grafana : 시각화 대시보드<br>- Slack : 상태 알림 연동 |
-|  | 스토리지 | - Rook + Ceph : 분산 파일 시스템 (PVC)<br>- PostgreSQL, Redis : 서비스 데이터 저장소 |
-| [3] AWS 클라우드 배포 | 네트워크 구성 | - VPC 내 이중 AZ 구성<br>- Public Subnet : Bastion Server<br>- Private Subnet : Spring Boot, React 컨테이너 |
-|  | 외부 연동 | - Route 53 + Load Balancer : 트래픽 분산<br>- S3, ECR : 정적 파일 및 이미지 저장 |
-| [4] 온프레 ↔ 클라우드 연계 | 이미지 전달 | Jenkins + Kaniko 빌드 결과를 Harbor에 업로드 후 AWS에서 pull |
-|  | 역할 분리 | - 온프레 : 빌드/보안/모니터링<br>- 클라우드 : 서비스 실행(Spring, React) |
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_description.png" alt="인프라 아키텍처" width="1000"/>
 
 <br><br>
 
