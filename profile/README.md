@@ -8,7 +8,7 @@
 
 <br>
 
-## 🔹Team 꿀벌 방범대 소개  
+## ∙ Team 꿀벌 방범대 소개  
 <br>
 
 우리FISA 4기 클라우드 엔지니어링 과정 수강생 5명으로 구성된 팀입니다. <br>
@@ -21,19 +21,19 @@
 
 <br>
 
-## 🔹프로젝트 기간
+## ∙ 프로젝트 기간
 ### 📆 2025.04.18 ~ 2025.06.10
 
-<br>
+<br><br>
 
-## 🔹마일스톤
+## ∙ 마일스톤
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
 <br>
 
-## 🔹Git Branch 전략
+## ∙ Git Branch 전략
 <br>
 
 기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 <br> 최종적으로 main 브랜치에 병합하여 운영 환경에 배포했습니다.
@@ -42,7 +42,7 @@
 
 <br>
 
-## 🔹Overview
+## ∙ Overview
 <br>
 
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다 : <br>
@@ -205,7 +205,7 @@
 <br><br>
 
 
-## ✅ 인프라 아키텍처 개요
+## 3-1. 인프라 아키텍처 개요
 
 <br>
 
@@ -233,7 +233,7 @@
 
 <br><br>
 
-## ✅ 전체 인프라 아키텍처
+## 3-2. 전체 인프라 아키텍처
 
 <br>
 
@@ -246,7 +246,7 @@
 <br><br>
 
 
-## ✅ 애플리케이션 아키텍처
+## 3-3. 애플리케이션 아키텍처
 
 <br>
 
@@ -254,12 +254,14 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
-- Presentation Tier : <br>
-사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
-- Application Tier : <br>
-비즈니스 로직 처리, 인증 및 데이터 접근 수행
-- Data Tier : <br>
-세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
+  ৹ Presentation Tier : <br>
+  사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
+  
+  ৹ Application Tier : <br>
+  비즈니스 로직 처리, 인증 및 데이터 접근 수행
+  
+  ৹ Data Tier : <br>
+  세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 
 <br><br>
 
@@ -267,11 +269,13 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
-- View : <br> 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
-- Controller : <br>
-요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
-- Model : <br>
-서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
+  ৹ View : <br> 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
+  
+  ৹ Controller : <br>
+  요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
+  
+  ৹ Model : <br>
+  서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
 <br><br>
 
