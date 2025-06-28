@@ -2,16 +2,15 @@
 <br>
 
 
-(**사진으로 대체하는 부분임)
 
 ### "배우고 도전하고 성장하세요. 당신의 실력을 수호하는 공간, 가디언즈."
 
 
-모의해킹 문제와 실시간 환경 배포가 결합된 CTF(Capture The Flag) 플랫폼을 개발했습니다. <br>BeeGuardians는 별도의 설치 없이, 웹에서 바로 실습하고 실력을 시각화하며 성장할 수 있습니다.
+모의해킹 문제와 실시간 환경 배포가 결합된 워게임 플랫폼을 개발했습니다. <br>BeeGuardians는 별도의 설치 없이, 웹에서 바로 실습하고 실력을 시각화하며 성장할 수 있습니다.
 
 <br>
 
-### ▪ Team 꿀벌 방범대 소개  
+## ▪ Team 꿀벌 방범대 소개  
 우리FISA 4기 클라우드 엔지니어링 과정 수강생 5명으로 구성된 팀입니다. <br>
 웹 애플리케이션 개발과 운영 및 배포(DevOps) 전반을 함께 다루며<br>
 약 2개월간 협업을 통해 BeeGuardians 프로젝트를 완성했습니다.
@@ -22,27 +21,27 @@
 
 <br>
 
-### ▪ 프로젝트 기간
+## ▪ 프로젝트 기간
 📆 2025.04.18 ~ 2025.06.10
 
 <br>
 
-### ▪ 마일스톤
+## ▪ 마일스톤
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
 <br>
 
-### ▪ Overview
+## ▪ Overview
 
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다 : <br>
-#### [1. 프로젝트 개요](#1-프로젝트-개요)  
-#### [2. 프로젝트 소개](#2-프로젝트-소개)  
-#### [3. 기술 스택 및 아키텍처](#3-기술-스택-및-아키텍처)  
-#### [4. 프론트엔드](#4-프론트엔드)  
-#### [5. 백엔드 및 DB](#5-백엔드-및-db)  
-#### [6. 인프라](#6-인프라)  
-#### [7. 트러블 슈팅](#7-트러블-슈팅)  
-#### [8. 회고](#8-회고)
+### [1. 프로젝트 개요](#1-프로젝트-개요)  
+### [2. 프로젝트 소개](#2-프로젝트-소개)  
+### [3. 기술 스택 및 아키텍처](#3-기술-스택-및-아키텍처)  
+### [4. 프론트엔드](#4-프론트엔드)  
+### [5. 백엔드 및 DB](#5-백엔드-및-db)  
+### [6. 인프라](#6-인프라)  
+### [7. 트러블 슈팅](#7-트러블-슈팅)  
+### [8. 회고](#8-회고)
 
 <br><br>
 
@@ -92,7 +91,7 @@
 
 <br>
 
-**🖥️ 모의해킹 실습 환경 - 워게임이란?**
+### 🖥️ 모의해킹 실습 환경 - 워게임이란?
 
 >다양한 해킹 관련 문제를 풀어보며 보안 기술을 연습하는 실습 콘텐츠. <br>
 사용자는 웹 해킹/포렌식/리버싱 등 여러 분야의 문제를 해결해나가며
@@ -104,7 +103,7 @@
 
 <br><br>
 
-**🎲 워게임 pod 생성 요약도** 
+### 🎲 워게임 pod 생성 요약도 
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/pod_flow.png" alt="POD요약도" width="700"/>
 
@@ -153,25 +152,25 @@
 
 <br>
 
-**৹ 인프라**
+### ৹ 인프라
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_stack.png" alt="인프라 기술스택" width="800"/>
 
 <br>
 
-**৹ 백엔드**
+### ৹ 백엔드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/back_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
-**৹ 프론트엔드**
+### ৹ 프론트엔드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/front_stack.png" alt="인프라 기술스택" width="500"/>
 
 <br>
 
-**৹ DB**
+### ৹ DB
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
@@ -274,7 +273,7 @@
 
 <br>
 
-### ① 메인 화면
+## ① 메인 화면
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front0.png" alt="프론트0" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front00.png" alt="프론트00" style="height: 300px, width: 300px;" />
@@ -282,7 +281,7 @@
 
 <br><br>
 
-### ② 로그인 및 회원가입
+## ② 로그인 및 회원가입
 
 <div style="display: flex; align-items: flex-start; gap: 20px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front1.jpg" alt="프론트1" style="height: 300px;" />
@@ -291,7 +290,7 @@
 
 <br><br>
 
-### ③ 워게임
+## ③ 워게임
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front3.png" alt="프론트3" style="height: 300px, width: 300px;" />
@@ -307,7 +306,7 @@
 
 <br><br>
 
-### ④ 랭킹
+## ④ 랭킹
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front7.png" alt="프론트7" style="height: 300px, width: 300px;" />
@@ -316,7 +315,7 @@
 
 <br><br>
 
-### ⑤ 커뮤니티
+## ⑤ 커뮤니티
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front9.png" alt="프론트9" style="height: 300px, width: 300px;" />
@@ -325,7 +324,7 @@
 
 <br><br>
 
-### ⑥ 커리어
+## ⑥ 커리어
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front11.png" alt="프론트11" style="height: 300px, width: 300px;" />
@@ -334,7 +333,7 @@
 
 <br><br>
 
-### ⑦ 대시보드
+## ⑦ 대시보드
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front13.png" alt="프론트13" style="height: 300px, width: 300px;" />
@@ -343,27 +342,27 @@
 
 <br><br>
 
-### ⑧ 관리자 전용 페이지
+## ⑧ 관리자 전용 페이지
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front15.png" alt="프론트15" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front16.png" alt="프론트16" style="height: 300px, width: 300px;" />
 </div>
 
-<br><br>
+<br><br><br>
 
 # 5. 백엔드 및 DB
 
 <br>
 
-- **패키지 다이어그램**
+### • 패키지 다이어그램
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/package_diagram.png" alt="앱 아키텍처" width="600"/>
 
   <br><br>
 
-- **주요 기능별 흐름**
+### • 주요 기능별 흐름
 
 | 기능 영역        |     클래스 흐름    |
 |------------------|----------------------------------|
@@ -377,7 +376,7 @@
 
 <br><br>
 
-- **ERD**
+### • ERD
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="앱 아키텍처" width="1000"/>
 
