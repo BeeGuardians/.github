@@ -6,7 +6,7 @@
 
 모의해킹 문제와 실시간 환경 배포가 결합된 워게임 플랫폼을 개발했습니다. <br>BeeGuardians는 별도의 설치 없이, 웹에서 바로 실습하고 실력을 시각화하며 성장할 수 있습니다.
 
-<br>
+<br><br>
 
 ## ∙ Team 꿀벌 방범대 소개  
 <br>
@@ -19,7 +19,7 @@
 |:-:|:-:|:-:|:-:|:-:|
 |[PM] 한정현<br/>[@letsgojh0810](https://github.com/letsgojh0810)|[PL] 나홍찬<br/>[@HongChan1412](https://github.com/HongChan1412)|김예진<br/>[@yeejkim](https://github.com/yeejkim)|박지혜<br/>[@parkjhhh](https://github.com/parkjhhh)|석혜진<br/>[@HyeJinSeok](https://github.com/HyeJinSeok)|
 
-<br>
+<br><br>
 
 ## ∙ 프로젝트 기간
 ### 📆 2025.04.18 ~ 2025.06.10
@@ -31,7 +31,7 @@
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
-<br>
+<br><br>
 
 ## ∙ Git Branch 전략
 <br>
@@ -40,7 +40,7 @@
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="800"/>
 
-<br>
+<br><br>
 
 ## ∙ Overview
 <br>
@@ -48,14 +48,17 @@
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다 : <br>
 ### [1. 프로젝트 개요](#1-프로젝트-개요)  
 ### [2. 프로젝트 소개](#2-프로젝트-소개)  
-### [3. 기술 스택 및 아키텍처](#3-기술-스택-및-아키텍처)  
-### [4. 프론트엔드](#4-프론트엔드)  
-### [5. 백엔드 및 DB](#5-백엔드-및-db)  
-### [6. 인프라](#6-인프라)  
-### [7. 트러블 슈팅](#7-트러블-슈팅)  
-### [8. 회고](#8-회고)
+### [3. 기술 스택](#3-기술-스택)
+### [4. 아키텍처](#4-아키텍처)
+### [5. 프론트엔드](#5-프론트엔드)
+### [6. 백엔드 및 DB](#6-백엔드-및-db)  
+### [7. 인프라](#7-인프라)  
+### [8. 트러블 슈팅](#8-트러블-슈팅)  
+### [9. 회고](#9-회고)
 
 <br><br>
+
+<br>
 
 # 1. 프로젝트 개요
 <br>
@@ -94,6 +97,7 @@
 
 <br><br>
 
+<br>
 
 # 2. 프로젝트 소개
 <br>
@@ -174,9 +178,11 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 | 네트워크 보안     | Bastion 서버, Public / Private 서브넷 분리 및 접근 제어 |
 | 도메인 관리       | Route 53을 통한 도메인 라우팅 설정 |
 
-  <br><br>
+<br><br>
 
-  # 3. 기술 스택 및 아키텍처
+<br>
+
+# 3. 기술 스택
 
 <br>
 
@@ -204,12 +210,13 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+<br>
 
-## ◈ 인프라 아키텍처 개요
+# 4. 아키텍처
 
 <br>
 
-### < 온프레미스 - 클라우드 연동형 k8s 인프라 구조 >
+### 1) 온프레미스 - 클라우드 연동형 k8s 인프라 구조
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_arch.png" alt="인프라 아키텍처" width="1000"/>
 
@@ -233,7 +240,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
-## ◈ 전체 인프라 아키텍처
+### 2) 전체 인프라 아키텍처
 
 <br>
 
@@ -246,11 +253,11 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 <br><br>
 
 
-## ◈ 애플리케이션 아키텍처
+### 3) 애플리케이션 아키텍처
 
 <br>
 
-### < 3-Tier 아키텍처 >
+ - 3-Tier 아키텍처
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
@@ -265,7 +272,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
-### < MVC 모델 >
+- MVC 모델
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
@@ -280,7 +287,9 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
-# 4. 프론트엔드
+<br>
+
+# 5. 프론트엔드
 <br>
 
 ```
@@ -296,7 +305,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
  └─ 관리자용 페이지 ► 사용자 관리, 워게임 / 채용공고 등록 및 삭제
  ```
 
-<br>
+<br><br>
 
 ## ① 메인 화면
 <br>
@@ -308,6 +317,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+<br>
+
 ## ② 로그인 및 회원가입
 <br>
 
@@ -317,6 +328,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 </div>
 
 <br><br>
+
+<br>
 
 ## ③ 워게임
 <br>
@@ -335,6 +348,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+<br>
+
 ## ④ 랭킹
 <br>
 
@@ -344,6 +359,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 </div>
 
 <br><br>
+
+<br>
 
 ## ⑤ 커뮤니티
 <br>
@@ -355,6 +372,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+<br>
+
 ## ⑥ 커리어
 <br>
 
@@ -364,6 +383,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 </div>
 
 <br><br>
+
+<br>
 
 ## ⑦ 대시보드
 <br>
@@ -375,6 +396,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+<br>
+
 ## ⑧ 관리자 전용 페이지
 <br>
 
@@ -383,9 +406,11 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front16.png" alt="프론트16" style="height: 300px, width: 300px;" />
 </div>
 
-<br><br><br>
+<br><br>
 
-# 5. 백엔드 및 DB
+<br>
+
+# 6. 백엔드 및 DB
 
 <br>
 
@@ -491,3 +516,9 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   |                  |                   | deadline             |             |
 
   </details>
+
+  <br><br>
+
+  <br>
+
+  # 7. 인프라
