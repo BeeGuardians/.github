@@ -174,8 +174,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 | 모니터링          | Prometheus + Grafana로 메트릭 수집 및 시각화 |
 | 로그 수집         | Loki + Promtail로 시스템 로그 수집 및 분석 |
 | 스토리지          | Rook-Ceph 기반 PVC 및 Amazon S3 활용 |
-| 고가용성 구성     | 2개 AZ 기반 Master / Worker 분산 배치 |
-| 네트워크 보안     | Bastion 서버, Public / Private 서브넷 분리 및 접근 제어 |
+| 고가용성 구성     | 2개 AZ 기반 Master/Worker 분산 배치 |
+| 네트워크 보안     | Bastion 서버, Public/Private 서브넷 분리 및 접근 제어 |
 | 도메인 관리       | Route 53을 통한 도메인 라우팅 설정 |
 
 <br><br>
@@ -307,7 +307,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
-## ① 메인 화면
+## ① 메인 화면 : 플랫폼의 핵심 가치와 방향성을 전달
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -319,7 +319,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ② 로그인 및 회원가입
+## ② 로그인 및 회원가입 : 사용자 인증 및 신규 사용자 등록
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 20px;">
@@ -331,7 +331,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ③ 워게임
+## ③ 워게임 : 해킹 실습 기반의 문제 풀이 플랫폼
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -350,7 +350,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ④ 랭킹
+## ④ 랭킹 : 전체 사용자 순위 조회 및 검색
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -362,7 +362,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ⑤ 커뮤니티
+## ⑤ 커뮤니티 : 사용자 간 정보 공유를 위한 공간
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -374,7 +374,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ⑥ 커리어
+## ⑥ 커리어 : 보안 관련 채용 정보 제공 페이지
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -386,7 +386,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ⑦ 대시보드
+## ⑦ 대시보드 : 내가 푼 워게임 기반의 시각화된 피드백 제공
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -398,7 +398,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-## ⑧ 관리자 전용 페이지
+## ⑧ 관리자 전용 페이지 : 사용자 관리 및 워게임/채용공고 등록 및 삭제
 <br>
 
 <div style="display: flex; align-items: flex-start; gap: 16px;">
@@ -417,21 +417,14 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 ### • 패키지 다이어그램
 <br>
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/package_diagram.png" alt="앱 아키텍처" width="600"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/package_diagram.png" alt="패키지 다이어그램" width="700"/>
 
   <br><br>
 
-### • 주요 기능별 흐름
+### • 주요 기능별 클래스 흐름
+<br>
 
-| 기능 영역        |     클래스 흐름    |
-|------------------|----------------------------------|
-| 마이페이지        | MypageController → MypageServiceImpl → 여러 Repository (User, Board 등) |
-| 워게임          | WargameController → WargameServiceImpl → WargameRepository <br> Entity : Wargame / SolvedWargame / Review |
-| 랭킹          | RankingController → UserServiceImpl    |
-| 커뮤니티(Q&A)     | QnaController → QuestionServiceImpl, AnswerServiceImpl → QuestionRepository, AnswerRepository |
-| 게시판/댓글       | BoardController, CommentController → BoardServiceImpl → BoardRepository <br> Entity : Board / Comment / BoardLike |
-|  커리어     | JobController → JobServiceImpl → JobRepository    |
-| 대시보드          | DashboardController → DashboardServiceImpl → UserStatsRepository, SolvedWargameRepository 등 <br> DTO : ResRadarScoreDto, ResScoreTrendDto 등 |
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/function_flow.png" alt="기능별 클래스 흐름" width="1000"/>
 
 <br><br>
 
