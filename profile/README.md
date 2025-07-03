@@ -97,6 +97,8 @@
 
 <br><br>
 
+---
+
 <br>
 
 # 2. 프로젝트 소개
@@ -180,6 +182,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+---
+
 <br>
 
 # 3. 기술 스택
@@ -209,6 +213,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
 <br><br>
+
+---
 
 <br>
 
@@ -286,6 +292,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   : 서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
 <br><br>
+
+---
 
 <br>
 
@@ -408,6 +416,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br><br>
 
+---
+
 <br>
 
 # 6. 백엔드 및 DB
@@ -418,6 +428,14 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/package_diagram.png" alt="패키지 다이어그램" width="700"/>
+
+> [!NOTE]
+> 이 패키지 다이어그램은 백엔드 전체 구조의 의존 관계를 시각화한 것입니다. <br>
+<br> 요청은 controller → service → domain.repository → domain.entity 흐름으로 전달되며 <br>
+dto는 계층 간 데이터 전달을, exception은 공통 예외 처리를 담당합니다. <br>
+config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <br><br>
+전체 애플리케이션의 계층적 책임 분리를 통해 유지보수성과 확장성을 확보했습니다.
+
 
   <br><br>
 
@@ -430,87 +448,15 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 ### • ERD
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="앱 아키텍처" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="ERD" width="1000"/>
 
-  <details>
-  <summary> ERD 요약 테이블 (클릭하여 펼치기)</summary>
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
 
-  <br>
-
-  | 테이블명         | 설명              | 주요 컬럼           | 제약 조건    |
-  |------------------|-------------------|----------------------|-------------|
-  | users            | 회원 정보         | id                   | PK          |
-  |                  |                   | username             |             |
-  |                  |                   | email                |             |
-  |                  |                   | role                 |             |
-  |                  |                   | last_login           |             |
-  | user_stats       | 사용자 통계       | user_id              | PK + FK     |
-  |                  |                   | score                |             |
-  |                  |                   | tier                 |             |
-  |                  |                   | total_solved         |             |
-  | user_badges      | 획득한 뱃지        | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | badge_id             | FK          |
-  |                  |                   | awarded_at           |             |
-  | badges           | 뱃지 목록          | id                   | PK          |
-  |                  |                   | name                 |             |
-  |                  |                   | true_icon_url        |             |
-  |                  |                   | false_icon_url       |             |
-  | boards           | 게시글            | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | title                |             |
-  |                  |                   | content              |             |
-  |                  |                   | board_type           |             |
-  | comments         | 게시글 댓글        | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | board_id             | FK          |
-  |                  |                   | content              |             |
-  | board_likes      | 게시글 좋아요      | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | board_id             | FK          |
-  | questions        | 워게임 질문        | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | wargame_id           | FK          |
-  |                  |                   | title                |             |
-  |                  |                   | content              |             |
-  | answers          | 워게임 질문 답변   | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | question_id          | FK          |
-  |                  |                   | content              |             |
-  | wargames         | 워게임 문제        | id                   | PK          |
-  |                  |                   | title                |             |
-  |                  |                   | score                |             |
-  |                  |                   | difficulty           |             |
-  |                  |                   | docker_image_url     |             |
-  | solved_wargames  | 워게임 풀이 기록     | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | wargame_id           | FK          |
-  |                  |                   | solved_at            |             |
-  | wargame_likes    | 워게임 좋아요        | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | wargame_id           | FK          |
-  | reviews          | 워게임 리뷰          | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | wargame_id           | FK          |
-  |                  |                   | content              |             |
-  |                  |                   | like_count           |             |
-  | bookmarks        | 워게임 북마크        | id                   | PK          |
-  |                  |                   | user_id              | FK          |
-  |                  |                   | wargame_id           | FK          |
-  | wargame_flags    | 워게임 정답(flag)    | wargame_id           | PK + FK     |
-  |                  |                   | flag                 |             |
-  | categories       | 워게임 카테고리      | id                   | PK + FK     |
-  |                  |                   | name                 |             |
-  |                  |                   | description          |             |
-  | jobs             | 채용 공고          | id                   | PK          |
-  |                  |                   | company_name         |             |
-  |                  |                   | title                |             |
-  |                  |                   | location             |             |
-  |                  |                   | deadline             |             |
-
-  </details>
 
   <br><br>
+
+  ---
 
   <br>
 
