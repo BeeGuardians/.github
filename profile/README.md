@@ -8,7 +8,7 @@
 
 <br><br>
 
-## ∙ Team 꿀벌 방범대 소개  
+## ▾ Team 꿀벌 방범대 소개  
 <br>
 
 우리FISA 4기 클라우드 엔지니어링 과정 수강생 5명으로 구성된 팀입니다. <br>
@@ -21,19 +21,19 @@
 
 <br><br>
 
-## ∙ 프로젝트 기간
+## ▾ 프로젝트 기간
 ### 📆 2025.04.18 ~ 2025.06.10
 
 <br><br>
 
-## ∙ 마일스톤
+## ▾ 마일스톤
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
 <br><br>
 
-## ∙ Git Branch 전략
+## ▾ Git Branch 전략
 <br>
 
 기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 <br> 최종적으로 main 브랜치에 병합하여 운영 환경에 배포했습니다.
@@ -42,7 +42,7 @@
 
 <br><br>
 
-## ∙ Overview
+## ▾ Overview
 <br>
 
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다 : <br>
@@ -323,6 +323,22 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front00.png" alt="프론트00" style="height: 300px, width: 300px;" />
 </div>
 
+<br>
+
+```
+•  상단 내비게이션 바(Navbar) : 로그인 버튼 / 워게임 / 랭킹 / 커뮤니티 / 커리어 / 대시보드 (로그인 시)
+
+•  플랫폼 소개 영역 : 플랫폼명(가디언즈) 및 핵심 슬로건 소개
+
+•  이용자 공감 문구
+
+•  이모지 & 캐릭터 삽화 : 사용자의 고민을 시각적으로 전달
+
+•  하단 후기 영역 (슬라이드 형태)
+
+•  CTA(Call To Action) 버튼 : '회원가입하고 시작하기' 버튼 (로그인한 경우 '대시보드로 이동'으로 변경됨)
+```
+
 <br><br>
 
 <br>
@@ -334,6 +350,22 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front1.jpg" alt="프론트1" style="height: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front2.png" alt="프론트2" style="height: 300px;" />
 </div>
+
+<br>
+
+```
+•  로그인 폼 : 이메일 + 비밀번호 입력 → 로그인 버튼 클릭 시 인증
+
+•  회원가입 진입 버튼 : 로그인 화면 하단 이메일 회원가입 버튼을 통해 회원가입 화면으로 이동
+
+•  비밀번호 찾기 : 로그인 화면 하단 링크로 비밀번호 재설정 페이지로 이동
+
+•  회원가입 폼 : 이메일 인증, 닉네임 입력, 비밀번호 2회 입력
+
+•  이용약관 동의 : 전체 동의 / 이용약관 동의 / 개인정보 수집 및 이용 동의 체크박스
+
+•  회원가입 완료 버튼 : 모든 항목 입력 및 동의 시 버튼 활성화됨 
+```
 
 <br><br>
 
@@ -424,7 +456,7 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
-### • 패키지 다이어그램
+### < 패키지 다이어그램 >
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/package_diagram.png" alt="패키지 다이어그램" width="700"/>
@@ -439,14 +471,14 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
   <br><br>
 
-### • 주요 기능별 클래스 흐름
+### < 주요 기능별 클래스 흐름 >
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/function_flow.png" alt="기능별 클래스 흐름" width="1000"/>
 
 <br><br>
 
-### • ERD
+### < ERD >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="ERD" width="1000"/>
 
