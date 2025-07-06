@@ -325,6 +325,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
+📌 기능 목록
+
 ```
 •  상단 내비게이션 바(Navbar) : 로그인 버튼 / 워게임 / 랭킹 / 커뮤니티 / 커리어 / 대시보드 (로그인 시)
 
@@ -352,6 +354,8 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 </div>
 
 <br>
+
+📌 기능 목록
 
 ```
 •  로그인 폼 : 이메일 + 비밀번호 입력 → 로그인 버튼 클릭 시 인증
@@ -381,10 +385,31 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
 
 <br>
 
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
+<br><br>
+
 <div style="display: flex; align-items: flex-start; gap: 16px;">
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front5.png" alt="프론트5" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front6.png" alt="프론트6" style="height: 300px, width: 300px;" />
 </div>
+
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
 
 <br><br>
 
@@ -398,6 +423,17 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front8.png" alt="프론트8" style="height: 300px, width: 300px;" />
 </div>
 
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
+
 <br><br>
 
 <br>
@@ -409,6 +445,17 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front9.png" alt="프론트9" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front10.png" alt="프론트10" style="height: 300px, width: 300px;" />
 </div>
+
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
 
 <br><br>
 
@@ -422,6 +469,17 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front12.png" alt="프론트12" style="height: 300px, width: 300px;" />
 </div>
 
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
+
 <br><br>
 
 <br>
@@ -434,6 +492,17 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front14.png" alt="프론트14" style="height: 300px, width: 300px;" />
 </div>
 
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
+
 <br><br>
 
 <br>
@@ -445,6 +514,17 @@ flag는 문제해결 과정 중에 발견할 수 있도록 설계되어 있어,
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front15.png" alt="프론트15" style="height: 300px, width: 300px;" />
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/front16.png" alt="프론트16" style="height: 300px, width: 300px;" />
 </div>
+
+<br>
+
+📌 기능 목록
+```
+•
+
+•
+
+•
+```
 
 <br><br>
 
