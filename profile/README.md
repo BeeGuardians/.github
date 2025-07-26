@@ -95,7 +95,7 @@
 > [!NOTE]
 > pod는 Kubernetes에서 가장 작은 배포 단위로, 하나 이상의 컨테이너를 포함할 수 있는 격리된 실행 환경입니다. <br> 전통적인 가상머신(VM)은 각 인스턴스마다 전체 운영체제를 포함해 무겁고 부팅시간이 오래 걸리는 반면, <br> pod는 호스트 OS를 공유하면서 필요한 애플리케이션만 실행하기 때문에 <br> 리소스 사용이 효율적이고 배포 속도가 빠르다는 장점을 가지고 있습니다. 
 
-<br><br><br>
+<br><br>
 
 ---
 
@@ -186,7 +186,7 @@
 | 네트워크 보안     | Bastion 서버, Public/Private 서브넷 분리 및 접근 제어 |
 | 도메인 관리       | Route 53을 통한 도메인 라우팅 설정 |
 
-<br><br><br>
+<br><br>
 
 ---
 
@@ -218,7 +218,7 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
-<br><br><br>
+<br><br>
 
 ---
 
@@ -297,7 +297,7 @@
 •  Model :<br>
   서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
-<br><br><br>
+<br><br>
 
 ---
 
@@ -530,7 +530,7 @@
 •  회원 관리 기능 : 관리자 그룹과 일반 사용자 그룹을 나눠서 표시 (권한, 삭제 버튼 포함)
 ```
 
-<br><br><br>
+<br><br>
 
 ---
 
@@ -572,7 +572,7 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 - 위 두 테이블을 중심으로, 사용자 활동과 워게임 콘텐츠를 둘러싼 대부분의 기능 테이블이 유기적으로 확장되며 ERD가 전개됨
 
-<br><br><br>
+<br><br>
 
   ---
 
