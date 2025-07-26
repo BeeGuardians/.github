@@ -277,10 +277,10 @@
   사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
   
 •  Application Tier :<br>
-비즈니스 로직 처리, 인증 및 데이터 접근 수행
+  비즈니스 로직 처리, 인증 및 데이터 접근 수행
   
 •  Data Tier :<br>
-세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
+  세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 
 <br><br>
 
@@ -288,14 +288,14 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
-  ৹ View <br>
-  : 기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
+•  View :<br>
+  기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
   
-  ৹ Controller <br>
-  : 요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
+•  Controller :<br>
+  요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
   
-  ৹ Model <br>
-  : 서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
+•  Model :<br>
+  서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
 <br><br>
 
@@ -304,7 +304,7 @@
 <br>
 
 # 5. 프론트엔드
-<br>
+<br><br>
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/menu_flow.png" alt="메뉴 흐름 요약도" width="800"/>
 
@@ -557,7 +557,6 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 ### < 주요 기능별 클래스 흐름 >
 <br>
-
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/function_flow.png" alt="기능별 클래스 흐름" width="1000"/>
 
 <br><br>
@@ -566,10 +565,12 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="ERD" width="1000"/>
 
-> [!IMPORTANT]
-> Key information users need to know to achieve their goal.
 
+- users 테이블 : 사용자 기반의 모든 기능과 연동되는 플랫폼의 중심 테이블
 
+- wargames 테이블 : 워게임 실습 환경의 Docker URL을 담고 있는 콘텐츠 중심 테이블
+
+- 위 두 테이블을 중심으로, 사용자 활동과 워게임 콘텐츠를 둘러싼 대부분의 기능 테이블이 유기적으로 확장되며 ERD가 전개됨
   <br><br>
 
   ---
