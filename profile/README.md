@@ -571,10 +571,49 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 - wargames 테이블 : 워게임 실습 환경의 Docker URL을 담고 있는 콘텐츠 중심 테이블
 
 - 위 두 테이블을 중심으로, 사용자 활동과 워게임 콘텐츠를 둘러싼 대부분의 기능 테이블이 유기적으로 확장되며 ERD가 전개됨
-  <br><br>
+
+<br><br>
 
   ---
 
   <br>
 
   # 7. 인프라
+
+<br>
+
+## 1) 온프레미스 CI/CD 
+
+<br><br>
+
+### 🔸 Jenkins 기반 CI/CD 파이프라인 Overview
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-1-jenkins.png" alt="기능별 클래스 흐름" width="1000"/>
+
+- Jenkins가 코드 변경을 감지해 Kaniko로 Docker 이미지를 빌드하고, Harbor에 푸시한 뒤 <br> 배포 YAML을 자동으로 갱신하는 파이프라인 실행 화면
+
+<br><br>
+
+### 🔸 Harbor 내 이미지 저장소 상태
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-2-harbor.png" alt="기능별 클래스 흐름" width="1000"/>
+
+- Jenkins에서 빌드된 이미지가 Harbor의 guardians 프로젝트에 푸시되며 <br> 프론트엔드 / 백엔드 레포지토리로 구분되어 관리되는 화면
+
+<br><br>
+
+### 🔸 Vault를 이용한 민감 정보(Secrets) 중앙 관리
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-3-vault.png" alt="기능별 클래스 흐름" width="1000"/>
+
+- AWS 키 / DB 접속 정보 / 메일 인증 정보 등 민감 데이터를 HashiCorp Vault의 Secrets 엔진에 저장
+
+<br><br>
+
+### 🔸Argo CD를 통한 애플리케이션 배포 및 동기화 현황
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-4-argo.png" alt="기능별 클래스 흐름" width="1000"/>
+
+- Git 리포지토리와 Kubernetes 클러스터를 동기화하여 <br> 지정된 Git 경로(cloud-cluster/*, onpremise-cluster/*)의 상태를 자동으로 반영
+
+<br><br>
