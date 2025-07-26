@@ -150,6 +150,10 @@
    → 워게임 Docker 이미지를 저장해두는 컨테이너 이미지 저장소  
    → 워게임 생성 시 해당 이미지를 기반으로 pod가 생성됨
 ```
+<br>
+
+> [!IMPORTANT]
+> Fabric8은 Java 기반 애플리케이션에서 K8s 리소스를 코드로 생성·관리할 수 있도록 해주는 오픈소스 라이브러리입니다. <br> 이를 통해 yaml 파일 없이 Java 코드로 Deployment, Pod, Service 등을 정의할 수 있습니다. <br><br> Amazon ECR은 Elastic Container Registry의 약자로, AWS에서 제공하는 완전관리형 Docker 이미지 저장소입니다. <br> 이를 통해 K8s 클러스터에서 이미지 pull 시 빠르고 안정적인 접근이 가능합니다.
 
 <br><br>
 
@@ -269,14 +273,14 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
-  ৹ Presentation Tier <br>
-  : 사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
+•  Presentation Tier :<br>
+  사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
   
-  ৹ Application Tier <br>
-  : 비즈니스 로직 처리, 인증 및 데이터 접근 수행
+•  Application Tier :<br>
+비즈니스 로직 처리, 인증 및 데이터 접근 수행
   
-  ৹ Data Tier <br>
-  : 세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
+•  Data Tier :<br>
+세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 
 <br><br>
 
