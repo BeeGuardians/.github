@@ -186,11 +186,11 @@
 | 네트워크 보안     | Bastion 서버, Public/Private 서브넷 분리 및 접근 제어 |
 | 도메인 관리       | Route 53을 통한 도메인 라우팅 설정 |
 
-<br><br>
+<br><br><br>
 
 ---
 
-<br>
+<br><br>
 
 # 3. 기술 스택
 
@@ -218,11 +218,11 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/db_stack.png" alt="DB 기술스택" width="500"/>
 
-<br><br>
+<br><br><br>
 
 ---
 
-<br>
+<br><br>
 
 # 4. 아키텍처
 
@@ -297,11 +297,11 @@
 •  Model :<br>
   서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
 
-<br><br>
+<br><br><br>
 
 ---
 
-<br>
+<br><br>
 
 # 5. 프론트엔드
 <br><br>
@@ -530,11 +530,11 @@
 •  회원 관리 기능 : 관리자 그룹과 일반 사용자 그룹을 나눠서 표시 (권한, 삭제 버튼 포함)
 ```
 
-<br><br>
+<br><br><br>
 
 ---
 
-<br>
+<br><br>
 
 # 6. 백엔드 및 DB
 
@@ -572,11 +572,11 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 - 위 두 테이블을 중심으로, 사용자 활동과 워게임 콘텐츠를 둘러싼 대부분의 기능 테이블이 유기적으로 확장되며 ERD가 전개됨
 
-<br><br>
+<br><br><br>
 
   ---
 
-  <br>
+  <br><br>
 
   # 7. 인프라
 
