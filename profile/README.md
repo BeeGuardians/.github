@@ -260,27 +260,32 @@
 
 <br>
 
-1️⃣ 개발자 → GitHub
+**1️⃣ 개발자 → GitHub**
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_1.png" alt="인프라 아키텍처" width="800"/>
 
 <br>
 
-2️⃣ 온프레미스 구성
+**2️⃣ 온프레미스 구성**
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_2.png" alt="인프라 아키텍처" width="800"/>
 
 <br>
 
-3️⃣ AWS 클라우드 배포
+**3️⃣ AWS 클라우드 배포**
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_3.png" alt="인프라 아키텍처" width="800"/>
 
 <br>
 
-4️⃣ 온프레 ↔ 클라우드 연계
+**4️⃣ 온프레 ↔ 클라우드 연계**
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_4.png" alt="인프라 아키텍처" width="800"/>
+
+<br>
+
+> [!IMPORTANT]
+> Nebula는 Slack에서 개발한 경량 오버레이 네트워크 솔루션으로, 멀리 떨어진 서버 간에 VPN을 구성해주는 오픈소스 도구입니다. <br> 이를 통해 K8s 클러스터, CI/CD 서버, 데이터베이스 등이 서로 다른 환경에 있어도 IP를 인식하고 통신할 수 있는 네트워크 경로를 제공합니다. <br><br> Argo CD는 GitOps 방식으로 K8s 애플리케이션을 자동 배포/동기화할 수 있도록 해주는 오픈소스 도구입니다. <br> 이를 통해 온프레미스 환경에 설치된 Argo CD 인스턴스가 AWS 클라우드 상의 K8s 클러스터와 연결되어, 원격으로 배포를 제어할 수 있습니다.
 
 <br><br>
 
