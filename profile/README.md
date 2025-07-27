@@ -260,7 +260,27 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_description.png" alt="인프라 아키텍처" width="1000"/>
+1️⃣ 개발자 → GitHub
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_1.png" alt="인프라 아키텍처" width="800"/>
+
+<br>
+
+2️⃣ 온프레미스 구성
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_2.png" alt="인프라 아키텍처" width="800"/>
+
+<br>
+
+3️⃣ AWS 클라우드 배포
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_3.png" alt="인프라 아키텍처" width="800"/>
+
+<br>
+
+4️⃣ 온프레 ↔ 클라우드 연계
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra_desc_4.png" alt="인프라 아키텍처" width="800"/>
 
 <br><br>
 
