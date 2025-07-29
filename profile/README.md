@@ -613,15 +613,15 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 ### ⚙️ Jenkins 기반 CI/CD 파이프라인 Overview
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-1-jenkins.png" alt="기능별 클래스 흐름" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-1-jenkins.png" alt="cicd-1-jenkins" width="1000"/>
 
-> Jenkins가 코드 변경을 감지해 Kaniko로 Docker 이미지를 빌드하고, Harbor에 푸시한 뒤 배포 YAML을 자동으로 갱신하는 파이프라인 실행 화면
+> Jenkins가 코드 변경을 감지해 Kaniko로 Docker 이미지를 빌드하고, Harbor에 푸시한 뒤 배포 YAML을 자동으로 갱신하는 파이프라인 실행
 
 <br><br>
 
 ### ⚙️ Harbor 내 이미지 저장소 상태
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-2-harbor.png" alt="기능별 클래스 흐름" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-2-harbor.png" alt="cicd-2-harbor" width="1000"/>
 
 > Jenkins에서 빌드된 이미지가 Harbor의 guardians 프로젝트에 푸시되며 프론트엔드 / 백엔드 레포지토리로 구분돼 관리되는 화면
 
@@ -629,7 +629,7 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 ### ⚙️ Vault를 이용한 민감 정보(Secrets) 중앙 관리
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-3-vault.png" alt="기능별 클래스 흐름" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-3-vault.png" alt="cicd-3-vault" width="1000"/>
 
 > AWS 키 / DB 접속 정보 / 메일 인증 정보 등 민감 데이터를 HashiCorp Vault의 Secrets 엔진에 저장
 
@@ -637,8 +637,70 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 ### ⚙️ Argo CD를 통한 애플리케이션 배포 및 동기화 현황
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-4-argo.png" alt="기능별 클래스 흐름" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-4-argo.png" alt="cicd-4-argo" width="1000"/>
 
 > Git 리포지토리와 Kubernetes 클러스터를 동기화하여, 지정된 Git 경로(cloud-cluster/*, onpremise-cluster/*)의 상태를 자동으로 반영
 
 <br><br>
+
+### ⚙️ GitHub Actions를 활용한 자동 배포
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-5-github-action.png" alt="cicd-5-github-action" width="1000"/>
+
+> 워게임 문제 추가 시, GitHub에 push만 하면 deploy.yaml 워크플로우가 자동 실행되어 병렬 배포가 이뤄짐
+
+<br><br>
+
+### ⚙️ Amazon ECR에 워게임 Docker 이미지 저장
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-6-ECR.png" alt="cicd-6-ECR" width="1000"/>
+
+> 각 워게임 문제를 Docker 이미지로 패키징해 Amazon ECR Public Gallery에 업로드
+
+<br><br>
+
+### ⚙️ Amazon S3에 워게임 ZIP 파일 저장
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-7-S3.png" alt="cicd-7-S3" width="1000"/>
+
+> **각 워게임 문제를 .zip 형식으로 패키징하여 wargame_zips/ S3 버킷에 업로드**
+
+<br><br>
+
+## 2) 분산 스토리지
+
+<br>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/분산_storage.png" alt="분산 스토리지" width="800"/>
+
+<br><br>
+
+## 3) 모니터링 / 로깅
+
+<br>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring.png" alt="모니터링" width="800"/>
+
+<br><br>
+
+### ⚙️ Prometheus + Grafana 기반 모니터링
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-1.png" alt="monitoring-1" width="1000"/>
+
+> 노드 리소스 실시간 수집 / Grafana 대시보드 시각화 / 리소스 상세 정보 제공 / 문제 감지 및 리소스 과부하 추적 가능
+
+<br><br>
+
+### ⚙️ SpringBoot Pod 상태 모니터링
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-2.png" alt="monitoring-2" width="1000"/>
+
+> Non-Heap 기반 메모리 사용률 / 기동 시간 / 실시간 로그 / HTTP 요청 통계 / CPU 및 Load 상태 시각화
+
+<br><br>
+
+### ⚙️ Slack 알림을 통한 실시간 모니터링 경고
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-3.png" alt="monitoring-3" width="1000"/>
+
+> Grafana와 연동해 워게임 인프라 상태 이상을 Slack 채널로 실시간 알림 전송
