@@ -71,6 +71,8 @@
  
  [7. 인프라](#7-인프라)  
 
+ [8. 서비스 평가 및 기대효과](#8-서비스-평가-및-기대효과)
+
 
 <br><br>
 
@@ -627,11 +629,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 <br>
 
 # 7. 인프라
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="700">
+
 <br>
-
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="500"/>
-
-<br><br>
 
 ## 🟡 CI / CD 
 
@@ -804,6 +805,7 @@ Slack 채널로 실시간 알림 전송
 
 ### < 고가용성(HA)을 고려한 K8s 클러스터 구성 >
 
+
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cloud.png" alt="cloud" width="900"/>
 
 ```
@@ -829,4 +831,17 @@ Slack 채널로 실시간 알림 전송
 <br><br>
 
 ---
+
+<br>
+
+# 8. 서비스 평가 및 기대효과
+<br>
+
+### < 회고 및 평가 >
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/evaluation.png" alt="서비스 평가" width="800"/>
+
+<br>
+
+### < 향후 확장성 및 기대효과 >
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/expectation.png" alt="기대효과" width="800"/>
 
