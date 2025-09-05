@@ -41,7 +41,7 @@
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.png" alt="마일스톤" width="1000"/>
 
-<br><br>
+<br>
 
 ## ⋄ Git Branch 전략
 <br>
@@ -73,8 +73,6 @@
 
 
 <br><br>
-
-<br>
 
 # 1. 프로젝트 개요
 <br>
@@ -216,19 +214,16 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/infra_stack.png" alt="인프라 기술스택" width="800"/>
 
-<br>
 
 ### < 백엔드 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/back_stack.png" alt="인프라 기술스택" width="500"/>
 
-<br>
 
 ### < 프론트엔드 >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/front_stack.png" alt="인프라 기술스택" width="500"/>
 
-<br>
 
 ### < DB >
 
@@ -329,7 +324,7 @@
 
 **< MVC 모델 >**
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="1000"/>
 
 ```
 • View
@@ -349,7 +344,7 @@
 <br>
 
 # 5. 프론트엔드
-<br><br>
+<br>
 
 ### < 메뉴 흐름 요약도 >
 
@@ -600,7 +595,11 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 전체 애플리케이션의 계층적 책임 분리를 통해 유지보수성과 확장성을 확보했습니다.
 
 
-  <br><br>
+[🔗 Guardians Backend 바로가기](https://github.com/BeeGuardians/Guardians-backend/tree/dev/guardians)
+
+[📂 main 소스코드 바로가기](https://github.com/BeeGuardians/Guardians-backend/tree/dev/guardians/src/main/java/com/guardians)
+
+<br><br>
 
 ### < 주요 기능별 클래스 흐름 >
 <br>
@@ -622,27 +621,29 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <br><br>
 
-  ---
+---
 
-  <br><br>
+<br>
 
-  # 7. 인프라
-
+# 7. 인프라
 <br>
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="500"/>
 
 <br><br>
 
-## ◉ CI / CD
+## 🟡 CI / CD 
 
-<br><br>
+<br>
 
 ### < Jenkins 기반 CI/CD 파이프라인 Overview >
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-1-jenkins.png" alt="cicd-1-jenkins" width="1000"/>
 
-- Jenkins가 코드 변경을 감지해 Kaniko로 Docker 이미지를 빌드하고, Harbor에 푸시한 뒤 배포 YAML을 자동으로 갱신하는 파이프라인 실행
+```
+Jenkins가 코드 변경을 감지해 Kaniko로 Docker 이미지를 빌드하고, 
+Harbor에 푸시한 뒤 배포 YAML을 자동으로 갱신하는 파이프라인 실행
+```
 
 <br><br>
 
@@ -650,7 +651,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-2-harbor.png" alt="cicd-2-harbor" width="1000"/>
 
-- Jenkins에서 빌드된 이미지가 Harbor의 guardians 프로젝트에 푸시되며 프론트엔드 / 백엔드 레포지토리로 구분돼 관리되는 화면
+```
+Jenkins에서 빌드된 이미지가 Harbor의 guardians 프로젝트에 푸시되며 
+프론트엔드/백엔드 레포지토리로 구분돼 관리되는 화면
+```
 
 <br><br>
 
@@ -658,7 +662,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-3-vault.png" alt="cicd-3-vault" width="1000"/>
 
-- AWS 키 / DB 접속 정보 / 메일 인증 정보 등 민감 데이터를 HashiCorp Vault의 Secrets 엔진에 저장
+```
+AWS 키 / DB 접속 정보 / 메일 인증 정보 등 민감 데이터를
+HashiCorp Vault의 Secrets 엔진에 저장
+```
 
 <br><br>
 
@@ -666,7 +673,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-4-argo.png" alt="cicd-4-argo" width="1000"/>
 
-- Git 리포지토리와 Kubernetes 클러스터를 동기화하여, 지정된 Git 경로(cloud-cluster/*, onpremise-cluster/*)의 상태를 자동으로 반영
+```
+Git 리포지토리와 Kubernetes 클러스터를 동기화하여
+지정된 Git 경로(cloud-cluster/*, onpremise-cluster/*)의 상태를 자동으로 반영
+```
 
 <br><br>
 
@@ -674,7 +684,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-5-github-action.png" alt="cicd-5-github-action" width="1000"/>
 
-- 워게임 문제 추가 시, GitHub에 push만 하면 deploy.yaml 워크플로우가 자동 실행되어 병렬 배포가 이뤄짐
+```
+워게임 문제 추가 시, GitHub에 push만 하면
+deploy.yaml 워크플로우가 자동 실행되어 병렬 배포가 이뤄짐
+```
 
 <br><br>
 
@@ -682,7 +695,10 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-6-ECR.png" alt="cicd-6-ECR" width="1000"/>
 
-- 각 워게임 문제를 Docker 이미지로 패키징해 Amazon ECR Public Gallery에 업로드
+```
+각 워게임 문제를 Docker 이미지로 패키징해 
+Amazon ECR Public Gallery에 업로드
+```
 
 <br><br>
 
@@ -690,15 +706,16 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cicd-7-S3.png" alt="cicd-7-S3" width="1000"/>
 
-- 각 워게임 문제를 .zip 형식으로 패키징하여 wargame_zips/ S3 버킷에 업로드
+```
+각 워게임 문제를 .zip 형식으로 패키징하여
+wargame_zips/ S3 버킷에 업로드
+```
 
 <br><br>
+
+## 🟡 분산 스토리지
 
 <br>
-
-## ◉ 분산 스토리지
-
-<br><br>
 
 ### < Rook-Ceph 기반 스토리지 구성 >
 
@@ -718,11 +735,9 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <br><br>
 
+## 🟡 모니터링 / 로깅 
+
 <br>
-
-## ◉ 모니터링 / 로깅
-
-<br><br>
 
 ### < 모니터링 & 로그 수집 알림 흐름 >
 
@@ -760,9 +775,7 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <br><br>
 
-<br>
-
-## ◉ AWS Cloud
+## 🟡 AWS Cloud 
 
 <br><br>
 
