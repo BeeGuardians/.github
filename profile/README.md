@@ -29,7 +29,7 @@
 ## ⋄ Github Repositories
 <br>
 
-<img src="https://github.com/BeeGuardians/bee-assets/blob/main/images/repo.png?raw=true" width="700" alt="Repo Screenshot">
+<img src="https://github.com/BeeGuardians/bee-assets/blob/main/images/repo.png?raw=true" width="500" alt="Repo Screenshot">
 
 
 [🔗 BeeGuardians 전체 저장소 바로가기](https://github.com/orgs/BeeGuardians/repositories)
@@ -48,7 +48,7 @@
 
 기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 <br> 최종적으로 main 브랜치에 병합하여 운영 환경에 배포했습니다.
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="800"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/git_branch.png" alt="마일스톤" width="600"/>
 
 <br><br>
 
@@ -576,7 +576,7 @@
 
 ---
 
-<br><br>
+<br>
 
 # 6. 백엔드 및 DB
 
@@ -594,6 +594,7 @@ dto는 계층 간 데이터 전달을, exception은 공통 예외 처리를 담�
 config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <br><br>
 전체 애플리케이션의 계층적 책임 분리를 통해 유지보수성과 확장성을 확보했습니다.
 
+<br>
 
 [🔗 Guardians Backend 바로가기](https://github.com/BeeGuardians/Guardians-backend/tree/dev/guardians)
 
@@ -721,12 +722,16 @@ wargame_zips/ S3 버킷에 업로드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/분산_storage.png" alt="분산 스토리지" width="800"/>
 
-- Harbor, Vault, Grafana Loki, Jenkins, PostgreSQL : 컨테이너화된 각종 서비스가 Ceph 기반의 영속 볼륨을 사용
+```
+• Harbor, Vault, Grafana Loki, Jenkins, PostgreSQL :
+  컨테이너화된 각종 서비스가 Ceph 기반의 영속 볼륨을 사용
 
-- Rook-Ceph PVC (Persistent Volume Claim) : K8s의 PVC 요청을 처리하며 내부적으로 Ceph 클러스터를 구성
+• Rook-Ceph PVC (Persistent Volume Claim) :
+  K8s의 PVC 요청을 처리하며 내부적으로 Ceph 클러스터를 구성
 
-- Ceph OSDs (Object Storage Daemons) :  guardians1~7 노드의 /dev/sdb 디스크를 OSD로 구성해 Ceph가 실제 물리 디스크에 데이터를 분산 저장함
-
+• Ceph OSDs (Object Storage Daemons) :
+  guardians 1~7 노드의 /dev/sdb 디스크를 OSD로 구성해 Ceph가 실제 물리 디스크에 데이터를 분산 저장함
+```
 
 <br>
 
@@ -743,11 +748,16 @@ wargame_zips/ S3 버킷에 업로드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring.png" alt="모니터링" width="800"/>
 
-- Metrics 수집 : Pod 및 Node에서 수집한 메트릭 데이터를 Prometheus가 저장하고, 이를 Grafana로 전달하여 시각화
+```
+• Metrics 수집:
+  Pod 및 Node에서 수집한 메트릭 데이터를 Prometheus가 저장하고, 이를 Grafana로 전달하여 시각화
   
-- 로그 수집 : Promtail이 K8s 로그를 수집해 Grafana Loki로 전달하고, Grafana에서 분석 가능하도록 제공
+• 로그 수집:
+  Promtail이 K8s 로그를 수집해 Grafana Loki로 전달하고, Grafana에서 분석 가능하도록 제공
 
-- 알림 전송 : Grafana에서 설정된 경고(Alert)가 조건 충족 시, Slack 채널로 실시간 알림을 전송하여 관리자에게 전달
+• 알림 전송:
+  Grafana에서 설정된 경고(Alert)가 조건 충족 시, Slack 채널로 실시간 알림을 전송하여 관리자에게 전달
+```
 
 <br><br>
 
@@ -755,7 +765,12 @@ wargame_zips/ S3 버킷에 업로드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-1.png" alt="monitoring-1" width="1000"/>
 
-- 노드 리소스 실시간 수집 / Grafana 대시보드 시각화 / 리소스 상세 정보 제공 / 문제 감지 및 리소스 과부하 추적 가능
+```
+- 노드 리소스 실시간 수집
+- Grafana 대시보드 시각화
+- 리소스 상세 정보 제공
+- 문제 감지 및 리소스 과부하 추적 가능
+```
 
 <br><br>
 
@@ -763,37 +778,53 @@ wargame_zips/ S3 버킷에 업로드
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-2.png" alt="monitoring-2" width="1000"/>
 
-- Non-Heap 기반 메모리 사용률 / 기동 시간 / 실시간 로그 / HTTP 요청 통계 / CPU 및 Load 상태 시각화
+```
+- Non-Heap 기반 메모리 사용률
+- 기동 시간
+- 실시간 로그 
+- HTTP 요청 통계
+- CPU 및 Load 상태 시각화
+```
 
 <br><br>
 
 ### < Slack 알림을 통한 실시간 모니터링 경고 >
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-3.png" alt="monitoring-3" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/monitoring-3.png" alt="monitoring-3" width="600"/>
 
-- Grafana와 연동해 워게임 인프라 상태 이상을 Slack 채널로 실시간 알림 전송
-
+```
+Grafana와 연동해 워게임 인프라 상태 이상을
+Slack 채널로 실시간 알림 전송
+```
 <br><br>
 
 ## 🟡 AWS Cloud 
 
-<br><br>
+<br>
 
 ### < 고가용성(HA)을 고려한 K8s 클러스터 구성 >
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cloud.png" alt="cloud" width="1000"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/cloud.png" alt="cloud" width="900"/>
 
-- **이중 AZ 구성** : 클러스터를 분산 배치해 장애 대응과 고가용성 확보
+```
+• 이중 AZ 구성:
+  클러스터를 분산 배치해 장애 대응과 고가용성 확보
 
-- **Public Subnet → Bastion Server** : Private Subnet의 노드들은 외부 직접 접근 불가, Bastion을 통해서만 SSH 가능
+• Public Subnet → Bastion Server:
+  Private Subnet의 노드들은 외부 직접 접근 불가, Bastion을 통해서만 SSH 가능
 
-- **Private Subnet → Master/Worker Node 구성** : Master는 클러스터 제어, Worker는 Pod 실행 담당
+• Private Subnet → Master/Worker Node 구성:
+  Master는 클러스터 제어, Worker는 Pod 실행 담당
 
-- **IGW(인터넷 게이트웨이) + 라우팅 구성** : 외부 통신을 위한 IGW 및 라우팅 테이블 연동
+• IGW(인터넷 게이트웨이) + 라우팅 구성: 
+  외부 통신을 위한 IGW 및 라우팅 테이블 연동
 
-- **Route 53 + ELB(로드밸런서) 연동** : 외부에서 접근 시, Route 53 도메인을 통해 ELB로 유입 → 트래픽 분산
+• Route 53 + ELB(로드밸런서) 연동:
+  외부에서 접근 시, Route 53 도메인을 통해 ELB로 유입 → 트래픽 분산
 
-- **S3, ECR 등 외부 연동 서비스 사용** : 클러스터 내에서 이미지(Pod) 실행 시 S3에서 파일 다운로드 → ECR에서 Docker 이미지 pull 수행
+• S3, ECR 등 외부 연동 서비스 사용: 
+  클러스터 내에서 이미지(Pod) 실행 시 S3에서 파일 다운로드 → ECR에서 Docker 이미지 pull 수행
+```
 
 <br><br>
 
