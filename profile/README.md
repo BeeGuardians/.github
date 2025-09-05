@@ -39,7 +39,7 @@
 ## ⋄ 마일스톤
 <br>
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.png" alt="마일스톤" width="800"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.png" alt="마일스톤" width="1000"/>
 
 <br><br>
 
@@ -77,7 +77,7 @@
 <br>
 
 # 1. 프로젝트 개요
-
+<br>
 
 ### 🌍 도입 배경
 - 세계경제포럼(WEF)의 「글로벌 사이버보안 전망 2025」보고서에 따르면, 전 세계적으로 사이버 보안 인력은 400만 명 이상 부족함
@@ -115,7 +115,7 @@
 
 ---
 
-<br><br>
+<br>
 
 # 2. 프로젝트 소개
 <br>
@@ -171,7 +171,7 @@
 > [!IMPORTANT]
 > Fabric8은 Java 기반 애플리케이션에서 K8s 리소스를 코드로 생성·관리할 수 있도록 해주는 오픈소스 라이브러리입니다. <br> 이를 통해 yaml 파일 없이 Java 코드로 Deployment, Pod, Service 등을 정의할 수 있습니다. <br><br> Amazon ECR은 Elastic Container Registry의 약자로, AWS에서 제공하는 완전관리형 Docker 이미지 저장소입니다. <br> 이를 통해 K8s 클러스터에서 이미지 pull 시 빠르고 안정적인 접근이 가능합니다.
 
-<br><br>
+<br>
 
 ### 📋 서비스 주요 기능
 
@@ -186,7 +186,7 @@
 | 마이페이지        | 내 정보 수정, 내가 쓴 게시글 및 내가 쓴 워게임 리뷰 확인                 |
 | 관리자 기능       | 워게임/채용공고 등록 및 관리, 사용자 목록 확인 및 삭제           |
 
-  <br><br>
+<br>
 
   ### 📋 인프라 주요 기능
 | 기능 영역         | 설명 |
@@ -206,7 +206,7 @@
 
 ---
 
-<br><br>
+<br>
 
 # 3. 기술 스택
 
@@ -238,7 +238,7 @@
 
 ---
 
-<br><br>
+<br>
 
 # 4. 아키텍처
 
@@ -325,7 +325,7 @@
   세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
 ```
 
-<br><br>
+<br>
 
 **< MVC 모델 >**
 
@@ -346,7 +346,7 @@
 
 ---
 
-<br><br>
+<br>
 
 # 5. 프론트엔드
 <br><br>
@@ -628,7 +628,7 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
   # 7. 인프라
 
-<br><br>
+<br>
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="500"/>
 
