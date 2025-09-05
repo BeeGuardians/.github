@@ -21,24 +21,25 @@
 
 <br><br>
 
-## ⋄ Github Repositories
-<br>
-
-[🔗 BeeGuardians 전체 저장소 바로가기](https://github.com/orgs/BeeGuardians/repositories)
-
-<img src="https://github.com/BeeGuardians/bee-assets/blob/main/images/repo.png?raw=true" width="700" alt="Repo Screenshot">
+## ⋄ 프로젝트 기간
+### 📆 2025.04.18 ~ 2025.06.10
 
 <br><br>
 
-## ⋄ 프로젝트 기간
-### 📆 2025.04.18 ~ 2025.06.10
+## ⋄ Github Repositories
+<br>
+
+<img src="https://github.com/BeeGuardians/bee-assets/blob/main/images/repo.png?raw=true" width="700" alt="Repo Screenshot">
+
+
+[🔗 BeeGuardians 전체 저장소 바로가기](https://github.com/orgs/BeeGuardians/repositories)
 
 <br><br>
 
 ## ⋄ 마일스톤
 <br>
 
-  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
+  <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.png" alt="마일스톤" width="800"/>
 
 <br><br>
 
@@ -350,6 +351,8 @@
 # 5. 프론트엔드
 <br><br>
 
+### < 메뉴 흐름 요약도 >
+
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/menu_flow.png" alt="메뉴 흐름 요약도" width="800"/>
 
 
@@ -607,12 +610,13 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 ### < ERD >
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/ERD.png" alt="ERD" width="1000"/>
+
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/erd.png" alt="ERD" width="1000"/>
 
 
-- users 테이블 : 사용자 기반의 모든 기능과 연동되는 플랫폼의 중심 테이블
+- **users 테이블** : 사용자 기반의 모든 기능과 연동되는 플랫폼의 중심 테이블
 
-- wargames 테이블 : 워게임 실습 환경의 Docker URL을 담고 있는 콘텐츠 중심 테이블
+- **wargames 테이블** : 워게임 실습 환경의 Docker URL을 담고 있는 콘텐츠 중심 테이블
 
 - 위 두 테이블을 중심으로, 사용자 활동과 워게임 콘텐츠를 둘러싼 대부분의 기능 테이블이 유기적으로 확장되며 ERD가 전개됨
 
