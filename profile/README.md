@@ -8,7 +8,7 @@
 
 <br><br>
 
-## ▾ Team 꿀벌 방범대 소개  
+## ⋄ Team 꿀벌 방범대 소개  
 <br>
 
 우리FISA 4기 클라우드 엔지니어링 과정 수강생 5명으로 구성된 팀입니다. <br>
@@ -21,19 +21,28 @@
 
 <br><br>
 
-## ▾ 프로젝트 기간
+## ⋄ Github Repositories
+<br>
+
+[🔗 BeeGuardians 전체 저장소 바로가기](https://github.com/orgs/BeeGuardians/repositories)
+
+<img src="https://github.com/BeeGuardians/bee-assets/blob/main/images/repo.png?raw=true" width="700" alt="Repo Screenshot">
+
+<br><br>
+
+## ⋄ 프로젝트 기간
 ### 📆 2025.04.18 ~ 2025.06.10
 
 <br><br>
 
-## ▾ 마일스톤
+## ⋄ 마일스톤
 <br>
 
   <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/milestone.jpg" alt="마일스톤" width="800"/>
 
 <br><br>
 
-## ▾ Git Branch 전략
+## ⋄ Git Branch 전략
 <br>
 
 기능 및 페이지 개발은 dev 브랜치에서 일괄 통합한 뒤, 테스트를 거쳐 <br> 최종적으로 main 브랜치에 병합하여 운영 환경에 배포했습니다.
@@ -42,7 +51,7 @@
 
 <br><br>
 
-## ▾ Overview
+## ⋄ Overview
 <br>
 
 아래 순서로 BeeGuardians 프로젝트의 주요 내용을 소개합니다. (클릭 시 해당 섹션으로 이동 가능) : <br>
@@ -60,10 +69,6 @@
  [6. 백엔드 및 DB](#6-백엔드-및-db)  
  
  [7. 인프라](#7-인프라)  
- 
- [8. 트러블 슈팅](#8-트러블-슈팅)  
- 
- [9. 회고](#9-회고)
 
 
 <br><br>
@@ -74,9 +79,9 @@
 
 
 ### 🌍 도입 배경
-- 세계경제포럼(WEF)이 발표한 「글로벌 사이버보안 전망 2025」보고서에 따르면, 전 세계적으로 사이버 보안 인력이 400만 명이 부족하여 인재 유치가 시급한 상황임
+- 세계경제포럼(WEF)의 「글로벌 사이버보안 전망 2025」보고서에 따르면, 전 세계적으로 사이버 보안 인력은 400만 명 이상 부족함
 
-- 최근 국내 대형 통신사를 시작으로 많은 기업들에서 해킹 사고가 잇따라 발생하면서 보안의 중요성이 대두되고 있음
+- 최근 국내 대형 통신사를 비롯하여 많은 기업들에서 해킹 사고가 잇따라 발생하면서 보안의 중요성이 대두되고 있음
 
 <br>
 
@@ -103,7 +108,7 @@
 <br>
 
 > [!NOTE]
-> pod는 Kubernetes에서 가장 작은 배포 단위로, 하나 이상의 컨테이너를 포함할 수 있는 격리된 실행 환경입니다. <br> 전통적인 가상머신(VM)은 각 인스턴스마다 전체 운영체제를 포함해 무겁고 부팅시간이 오래 걸리는 반면, <br> pod는 호스트 OS를 공유하면서 필요한 애플리케이션만 실행하기 때문에 리소스 사용이 효율적이고 배포 속도가 빠르다는 장점을 가지고 있습니다. 
+> Pod는 Kubernetes에서 가장 작은 배포 단위로, 하나 이상의 컨테이너를 포함할 수 있는 격리된 실행 환경입니다. <br> 전통적인 가상머신(VM)은 각 인스턴스마다 전체 운영체제를 포함해 무겁고 부팅시간이 오래 걸리는 반면, <br> Pod는 호스트 OS를 공유하면서 필요한 애플리케이션만 실행해 리소스 사용이 효율적이고 배포 속도가 빠릅니다. 
 
 <br><br>
 
@@ -257,7 +262,7 @@
 <br>
 
 > [!TIP]
-> 프로젝트 초기에는 AWS 비용을 절감하기 위해 온프레미스 자원을 우선적으로 활용해 인프라를 구성했습니다. <br> 이후 트래픽 증가와 서비스 안정성 확보를 위해 클라우드 기반 리소스를 구성했습니다.<br><br> 온프레미스에는 1대의 Master와 5대의 일반 Worker, 1대의 고사양 Worker 노드로 구성되었으며 <br> 클라우드 환경은 2개의 AZ를 활용해 Master/Worker 노드를 고가용성 구조로 분산 배치했습니다. <br> 또한 각 AZ에는 Bastion 서버를 별도로 두어 보안성과 접근 통제를 강화했습니다.
+> 프로젝트 초기에는 AWS 비용을 절감하기 위해 온프레미스 자원을 우선적으로 활용해 인프라를 구성했습니다. <br> 이후 트래픽 증가와 서비스 안정성 확보를 위해 클라우드 기반 리소스를 구성했습니다.<br><br> 온프레미스는 1대의 Master와 5대의 일반 Worker, 1대의 고사양 Worker 노드로 구성되었으며 <br> 클라우드 환경은 2개의 AZ를 활용해 Master/Worker 노드를 고가용성 구조로 분산 배치했습니다. <br> 또한 각 AZ에는 Bastion 서버를 별도로 두어 보안성과 접근 통제를 강화했습니다.
 
 
 <br><br>
@@ -295,7 +300,7 @@
 <br>
 
 > [!IMPORTANT]
-> Nebula는 Slack에서 개발한 경량 오버레이 네트워크 솔루션으로, 멀리 떨어진 서버 간에 VPN을 구성해주는 오픈소스 도구입니다. <br> 이를 통해 K8s 클러스터, CI/CD 서버, 데이터베이스 등이 서로 다른 환경에 있어도 IP를 인식하고 통신할 수 있는 네트워크 경로를 제공합니다. <br><br> Argo CD는 GitOps 방식으로 K8s 애플리케이션을 자동 배포/동기화할 수 있도록 해주는 오픈소스 도구입니다. <br> 이를 통해 온프레미스 환경에 설치된 Argo CD 인스턴스가 AWS 클라우드 상의 K8s 클러스터와 연결되어, 원격으로 배포를 제어할 수 있습니다.
+> Nebula는 Slack에서 개발한 경량 오버레이 네트워크 솔루션으로, 멀리 떨어진 서버 간에 VPN을 구성해주는 오픈소스 도구입니다. <br> 이를 통해 K8s 클러스터, CI/CD 서버, 데이터베이스 등이 서로 다른 환경에 있어도 IP를 인식하고 통신할 수 있는 네트워크 경로를 제공합니다. <br><br> Argo CD는 GitOps 방식으로 K8s 애플리케이션을 자동 배포 및 동기화할 수 있도록 해주는 오픈소스 도구입니다. <br> 온프레미스 환경에 설치된 ArgoCD 인스턴스가 AWS 클라우드 상의 K8s 클러스터와 연결되어, 원격으로 배포를 제어할 수 있습니다.
 
 <br><br>
 
@@ -308,14 +313,16 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/app_arch.png" alt="앱 아키텍처" width="800"/>
 
-•  Presentation Tier :<br>
+```
+• Presentation Tier 
   사용자와 직접 상호작용하는 웹 UI 구성, 요청을 백엔드로 전달하고 응답 결과를 화면에 표시
-  
-•  Application Tier :<br>
+
+• Application Tier 
   비즈니스 로직 처리, 인증 및 데이터 접근 수행
   
-•  Data Tier :<br>
+• Data Tier 
   세션 캐싱(Redis), 파일 저장(S3), 관계형 데이터 관리(PostgreSQL) 등 각종 데이터를 저장하고 관리하는 역할 담당
+```
 
 <br><br>
 
@@ -323,14 +330,16 @@
 
 <img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/techStack/mvc.png" alt="mvc 모델" width="800"/>
 
-•  View :<br>
-  기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉘며 라우팅과 마운트는 App.tsx, main.tsx에서 처리
+```
+• View
+  기능별 UI 구조(pages) + 컴포넌트 단위 구성(components)으로 나뉨. 라우팅과 마운트는 App.tsx, main.tsx에서 처리
   
-•  Controller :<br>
+• Controller
   요청을 받아 각 도메인의 서비스로 위임, 응답을 적절한 DTO로 변환해 반환
   
-•  Model :<br>
+• Model
   서비스 로직(service), DB 처리(repository), 엔티티(entity), 요청/응답 DTO(dto) 분리
+```
 
 <br><br>
 
@@ -617,7 +626,7 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="800"/>
+<img src="https://raw.githubusercontent.com/BeeGuardians/bee-assets/main/images/infra/composition.png" alt="인프라 구성도" width="500"/>
 
 <br><br>
 
@@ -772,18 +781,4 @@ config는 전역 설정, 보안, CORS 등의 환경 구성을 포함합니다. <
 <br><br>
 
 ---
-
-<br><br>
-
-# 8. 트러블 슈팅
-
-이러쿵저러쿵
-
-<br><br>
-
----
-
-<br><br>
-
-# 9. 회고
 
